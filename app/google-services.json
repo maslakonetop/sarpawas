@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "45646207922",
+    "firebase_url": "https://sarpolrescilacap.firebaseio.com",
+    "project_id": "sarpolrescilacap",
+    "storage_bucket": "sarpolrescilacap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45646207922:android:96626db0ee86be0406a2ab",
+        "android_client_info": {
+          "package_name": "id.co.gesangmultimedia.sarpawas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45646207922-e63u1ubh312mt5sginadteh3os7e8ggd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYj-Rd3J2dJ7W6vzy10LX6imXX4iRwPEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45646207922-e63u1ubh312mt5sginadteh3os7e8ggd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45646207922:android:5cb03bdb00d1a5cd06a2ab",
+        "android_client_info": {
+          "package_name": "id.co.gesangmultimedia.sarpolrescilacap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45646207922-e63u1ubh312mt5sginadteh3os7e8ggd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYj-Rd3J2dJ7W6vzy10LX6imXX4iRwPEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45646207922-e63u1ubh312mt5sginadteh3os7e8ggd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

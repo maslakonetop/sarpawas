@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".BerandaPawasb">
+
+    <RelativeLayout
+        android:id="@+id/rtlPawas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ivLogoPawas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlPawas1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPawas"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/btnJasHar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/jasaraharja"
+            android:layout_marginStart="15dp"
+            android:onClick="jashar"/>
+
+
+        <ImageButton
+            android:id="@+id/btnDishub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_toEndOf="@+id/btnJasHar"
+            android:background="@drawable/dishub"
+            android:onClick="dishub"/>
+
+        <ImageButton
+            android:id="@+id/btnDpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_toEndOf="@+id/btnDishub"
+            android:background="@drawable/dpu"
+            android:onClick="dpu"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlPawas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPawas1"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/btnDinkes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/dinkes"
+            android:onClick="Dinkes"/>
+
+        <ImageButton
+            android:id="@+id/btnDpbd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_toEndOf="@+id/btnDinkes"
+            android:background="@drawable/pbpbd"
+            android:onClick="Bpbd"/>
+
+        <ImageButton
+            android:id="@+id/btnPmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_toEndOf="@+id/btnDpbd"
+            android:background="@drawable/pmi"
+            android:onClick="pmi"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlPawas3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPawas2"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/btnFatimah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rsifatimah"
+            android:onClick="Fatimah"/>
+
+        <ImageButton
+            android:id="@+id/btnRsu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_toEndOf="@+id/btnFatimah"
+            android:background="@drawable/logopemda"
+            android:onClick="rsud"/>
+
+        <TextView
+            android:id="@+id/tvrsu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnRsu"
+            android:layout_alignStart="@+id/btnRsu"
+            android:layout_alignEnd="@+id/btnRsu"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="20dp"
+            android:text="RSU Cilacap"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/arialbd"/>
+
+        <ImageButton
+            android:id="@+id/btnRspc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_toEndOf="@+id/btnRsu"
+            android:background="@drawable/pertamedika"
+            android:onClick="rspc"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rtlPawas4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPawas3"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/btnDamkar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/damkar"
+            android:onClick="Damkar"/>
+
+        <ImageButton
+            android:id="@+id/btnSatpolpp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_toEndOf="@+id/btnDamkar"
+            android:background="@drawable/satpolpp"
+            android:onClick="Satpolpp"/>
+
+        <ImageButton
+            android:id="@+id/btnBasarnas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_toEndOf="@+id/btnSatpolpp"
+            android:background="@drawable/basarnas"
+            android:onClick="Basarnas"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rtlPawas5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPawas4"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/btnSantaMaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/santamaria"
+            android:layout_centerHorizontal="true"
+            android:onClick="SantaMaria"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
