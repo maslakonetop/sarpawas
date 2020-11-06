@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".DialerActivity">
+
+    <RelativeLayout
+        android:id="@+id/rtlDialer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibHeaderDialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/logo" />
+
+        <ImageButton
+            android:id="@+id/ibLogoStack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="107dp"
+            android:layout_toEndOf="@+id/ibHeaderDialer" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlDialer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlDialer">
+
+        <ImageButton
+            android:id="@+id/ibTelpDinas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/employee"/>
+
+        <ImageButton
+            android:id="@+id/ibTelponKadin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@+id/ibTelpDinas"
+            android:background="@drawable/teamlead" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlDialer3"
+        android:layout_width="399dp"
+        android:layout_height="128dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibNoDinas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_call"
+            android:onClick="kantor"/>
+
+        <ImageButton
+            android:id="@+id/ibNoKadin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/ibNoDinas"
+            android:background="@drawable/ic_smartphone"
+            android:onClick="hape"/>
+
+        <ImageButton
+            android:id="@+id/ibWhatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ibNoKadin"
+            android:background="@drawable/ic_whatsapp"
+            android:onClick="pesanwa"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlDialer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlDialer1"
+        android:layout_marginTop="25dp">
+
+        <EditText
+            android:id="@+id/etNoTelpon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="15"
+            android:inputType="phone"
+            android:fontFamily="@font/arial"
+            android:textSize="25sp"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNamaDinas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginBottom="42dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNoKadin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="42dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNamaDinas" />
+
+    <TextView
+        android:id="@+id/tvNomerDinas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvNoKadin"
+        app:layout_constraintStart_toEndOf="@+id/tvNamaDinas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
