@@ -116,24 +116,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:layout_toEndOf="@+id/btnFatimah"
-            android:background="@drawable/logopemda"
+            android:background="@drawable/logorsud"
             android:onClick="rsud"/>
 
-        <TextView
-            android:id="@+id/tvrsu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnRsu"
-            android:layout_alignStart="@+id/btnRsu"
-            android:layout_alignEnd="@+id/btnRsu"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="20dp"
-            android:text="RSU Cilacap"
-            android:textAlignment="center"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/arialbd"/>
+
 
         <ImageButton
             android:id="@+id/btnRspc"

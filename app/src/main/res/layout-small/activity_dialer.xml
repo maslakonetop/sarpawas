@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:background="@drawable/employee"/>
+            android:background="@drawable/goverment"/>
 
         <ImageButton
             android:id="@+id/ibTelponKadin"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_toEndOf="@+id/ibTelpDinas"
-            android:background="@drawable/teamlead" />
+            android:background="@drawable/man" />
     </RelativeLayout>
 
     <RelativeLayout

@@ -95,8 +95,8 @@ public class DialerActivity extends AppCompatActivity {
         ibTelponDinas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ibHp.setEnabled(false);
-                ibWa.setEnabled(false);
+                ibHp.setVisibility(View.GONE);
+                ibWa.setVisibility(View.GONE);
                 etNoTelpon.setText(strNoTelp);
             }
         });
@@ -104,7 +104,9 @@ public class DialerActivity extends AppCompatActivity {
         ibTelponKadin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ibKantor.setEnabled(false);
+                ibHp.setVisibility(View.VISIBLE);
+                ibWa.setVisibility(View.VISIBLE);
+                ibKantor.setVisibility(View.GONE);
                 etNoTelpon.setText(strNoHp);
             }
         });

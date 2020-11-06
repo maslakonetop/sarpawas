@@ -10,6 +10,9 @@
     <uses-permission
         android:name="android.permission.CALL_PRIVILEGED"
         tools:ignore="ProtectedPermissions" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key" />
 
     <application
         android:allowBackup="true"
@@ -18,12 +21,12 @@
         android:roundIcon="@mipmap/ic_pawas"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Login_Fake">
-        </activity>
+        <activity android:name=".OperatorActivity"></activity>
+        <activity android:name=".Login_Fake"></activity>
         <activity android:name=".DialerActivity" />
         <activity android:name=".TelponActivity" />
         <activity android:name=".BerandaPawas" />
-        <activity android:name=".BerandaPawasb" >
+        <activity android:name=".BerandaPawasb">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +35,7 @@
         </activity>
         <activity android:name=".BerandaSeting" />
         <activity android:name=".AdminLoginActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
