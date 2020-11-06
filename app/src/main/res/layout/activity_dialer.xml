@@ -21,14 +21,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:background="@drawable/logo" />
+            android:background="@drawable/logo"
+            tools:ignore="ContentDescription"/>
 
         <ImageButton
             android:id="@+id/ibLogoStack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="107dp"
-            android:layout_toEndOf="@+id/ibHeaderDialer" />
+            android:layout_toEndOf="@+id/ibHeaderDialer"
+            tools:ignore="ContentDescription"/>
 
     </RelativeLayout>
 
@@ -43,7 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:background="@drawable/employee"/>
+            android:background="@drawable/goverment"
+            tools:ignore="ContentDescription"/>
 
         <ImageButton
             android:id="@+id/ibTelponKadin"
@@ -51,13 +54,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_toEndOf="@+id/ibTelpDinas"
-            android:background="@drawable/teamlead" />
+            android:background="@drawable/man"
+            tools:ignore="ContentDescription"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rtlDialer3"
-        android:layout_width="399dp"
-        android:layout_height="128dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,8 +71,9 @@
             android:id="@+id/ibNoDinas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_call"
-            android:onClick="kantor"/>
+            android:background="@drawable/telephone"
+            android:onClick="kantor"
+            tools:ignore="ContentDescription"/>
 
         <ImageButton
             android:id="@+id/ibNoKadin"
@@ -76,16 +81,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/ibNoDinas"
-            android:background="@drawable/ic_smartphone"
-            android:onClick="hape"/>
+            android:background="@drawable/smartphone"
+            android:onClick="hape"
+            tools:ignore="ContentDescription"/>
 
         <ImageButton
             android:id="@+id/ibWhatsapp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/ibNoKadin"
-            android:background="@drawable/ic_whatsapp"
-            android:onClick="pesanwa"/>
+            android:background="@drawable/whatsapp"
+            android:onClick="pesanwa"
+            tools:ignore="ContentDescription"/>
 
     </RelativeLayout>
 
@@ -116,7 +123,8 @@
         android:layout_marginBottom="42dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:id="@+id/tvNoKadin"
@@ -128,7 +136,8 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvNamaDinas" />
+        app:layout_constraintStart_toEndOf="@+id/tvNamaDinas"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:id="@+id/tvNomerDinas"
@@ -138,6 +147,7 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvNoKadin"
-        app:layout_constraintStart_toEndOf="@+id/tvNamaDinas" />
+        app:layout_constraintStart_toEndOf="@+id/tvNamaDinas"
+        tools:ignore="HardcodedText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
