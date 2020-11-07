@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".BerandaPawasb">
+
+    <RelativeLayout
+        android:id="@+id/rtlPawas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ivLogoPawas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svBrdPawas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPawas"
+        tools:layout_editor_absoluteX="26dp">
+
+        <RelativeLayout
+            android:id="@+id/rtlDalem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rtlPawas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageButton
+                    android:id="@+id/btnJasHar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/jasaraharja"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:onClick="jashar"/>
+
+
+                <ImageButton
+                    android:id="@+id/btnDishub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@+id/btnJasHar"
+                    android:background="@drawable/dishub"
+                    android:onClick="dishub"/>
+
+                <ImageButton
+                    android:id="@+id/btnDpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_toEndOf="@+id/btnDishub"
+                    android:background="@drawable/dpu"
+                    android:onClick="dpu"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rtlPawas2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rtlPawas1">
+
+                <ImageButton
+                    android:id="@+id/btnDinkes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/dinkes"
+                    android:onClick="Dinkes" />
+
+                <ImageButton
+                    android:id="@+id/btnDpbd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@+id/btnDinkes"
+                    android:background="@drawable/pbpbd"
+                    android:onClick="Bpbd" />
+
+                <ImageButton
+                    android:id="@+id/btnPmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_toEndOf="@+id/btnDpbd"
+                    android:background="@drawable/pmi"
+                    android:onClick="pmi" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

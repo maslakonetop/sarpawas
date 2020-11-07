@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".BerandaSeting">
+
+    <RelativeLayout
+        android:id="@+id/rtlPengaturan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rtlPengaturan1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPengaturan">
+
+        <ImageButton
+            android:id="@+id/btnUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/usersetting"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:onClick="user"/>
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnUser"
+            android:layout_alignStart="@+id/btnUser"
+            android:layout_alignEnd="@+id/btnUser"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/arial"
+            android:maxLines="2"
+            android:text="Pengaturan \n Pengguna"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/btnAplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnUser"
+            android:layout_alignBottom="@+id/btnUser"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/btnUser"
+            android:background="@drawable/aplikasiset" />
+
+        <TextView
+            android:id="@+id/tvAplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAplikasi"
+            android:layout_alignStart="@+id/btnAplikasi"
+            android:layout_alignEnd="@+id/btnAplikasi"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/arial"
+            android:maxLines="2"
+            android:text="Pengaturan \n Aplikasi"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlPengaturan2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPengaturan1"
+        android:layout_marginTop="15dp">
+
+        <ImageButton
+            android:id="@+id/btnAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/admin"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/tvAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAdmin"
+            android:layout_alignStart="@+id/btnAdmin"
+            android:layout_alignEnd="@+id/btnAdmin"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/arial"
+            android:maxLines="2"
+            android:text="Pengaturan \n Admin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/btnTampilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnAdmin"
+            android:layout_alignBottom="@+id/btnAdmin"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/btnAdmin"
+            android:background="@drawable/tampilan" />
+
+        <TextView
+            android:id="@+id/tvTampilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnTampilan"
+            android:layout_alignStart="@+id/btnTampilan"
+            android:layout_alignEnd="@+id/btnTampilan"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/arial"
+            android:maxLines="2"
+            android:text="Pengaturan \n Tampilan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rtlPengaturan3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPengaturan2"
+        android:layout_marginTop="15dp">
+
+        <ImageButton
+            android:id="@+id/ivBalik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/kembali"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

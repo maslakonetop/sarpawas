@@ -26,7 +26,7 @@ public class BerandaPawasb extends AppCompatActivity {
     }
 
     public void jashar(View view) {
-        String strNoTelp = "+62282633961";
+        String strNoTelp = "+62281633961";
         String strNoHp = "6285870009919";
         String strDinas = "Jasa Raharja";
         Intent pawas = new Intent(BerandaPawasb.this, DialerActivity.class);

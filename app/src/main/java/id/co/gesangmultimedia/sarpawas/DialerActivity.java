@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
@@ -37,39 +38,39 @@ public class DialerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialer);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             TelephonyManager tm=(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
         }
 
         if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.CALL_PHONE)
+                Manifest.permission.CALL_PHONE)
                 != PackageManager.PERMISSION_GRANTED) {
 
             // Permission is not granted
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    android.Manifest.permission.CALL_PHONE)) {
+                    Manifest.permission.CALL_PHONE)) {
                 Toast.makeText(this, "Membutuhkan ijin Telepon", Toast.LENGTH_SHORT).show();
             } else {
 
                 // No explanation needed; request the permission
                 ActivityCompat.requestPermissions(this,
-                        new String[]{android.Manifest.permission.CALL_PHONE},
+                        new String[]{Manifest.permission.CALL_PHONE},
                         1);
             }
         }
         if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
+                Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
 
             // Permission is not granted
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
                 Toast.makeText(this, "Membutuhkan ijin Telepon", Toast.LENGTH_SHORT).show();
             } else {
 
                 // No explanation needed; request the permission
                 ActivityCompat.requestPermissions(this,
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                         1);
             }
         }
@@ -97,6 +98,7 @@ public class DialerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ibHp.setVisibility(View.GONE);
                 ibWa.setVisibility(View.GONE);
+                ibKantor.setVisibility(View.VISIBLE);
                 etNoTelpon.setText(strNoTelp);
             }
         });
@@ -143,7 +145,7 @@ public class DialerActivity extends AppCompatActivity {
             }
             case "Rsud": {
                 ImageButton imbDinas = findViewById(R.id.ibLogoStack);
-                imbDinas.setImageResource(R.drawable.logopemda);
+                imbDinas.setImageResource(R.drawable.logorsud);
                 break;
             }
             case "Rspc": {
@@ -238,19 +240,36 @@ public class DialerActivity extends AppCompatActivity {
     }
 
     public void pesanwa(View view) {
+        boolean installed = appInstalledOrNot("com.whatsapp");
+        if(installed) {
+            System.out.println("App is already installed on your phone");
+        } else {
+            System.out.println("App is not currently installed on your phone");
+        }
         //PackageManager pm = getPackageManager();
         EditText noWa = findViewById(R.id.etNoTelpon);
         String smsNumber = noWa.getText().toString();
         //String smsNumber = "6285870009919"; // E164 format without '+' sign
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setType("text/plain");
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Test Pesan WA");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Bantuan Online");
         sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
         sendIntent.setPackage("com.whatsapp");
-        //if (sendIntent.resolveActivity(PackageManager.GET_ACTIVITIES) == null) {
-            //Toast.makeText(this, "Aplikasi Whatsapp Tidak Ditemukan", Toast.LENGTH_SHORT).show();
-           // return;
-        //}
         startActivity(sendIntent);
+    }
+
+    private boolean appInstalledOrNot(String s) {
+        PackageManager pm = getPackageManager();
+        boolean app_installed;
+        try {
+            String packageName = null;
+            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            app_installed = true;
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            app_installed = false;
+        }
+        return app_installed;
+
     }
 }
