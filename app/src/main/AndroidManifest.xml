@@ -21,7 +21,6 @@
         android:roundIcon="@mipmap/ic_pawas"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".OperatorActivity"></activity>
         <activity android:name=".Login_Fake"></activity>
         <activity android:name=".DialerActivity" />
         <activity android:name=".TelponActivity" />

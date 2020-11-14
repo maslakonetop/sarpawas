@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
@@ -22,12 +23,11 @@ public class BerandaPawasb extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda_pawasb);
-
     }
 
     public void jashar(View view) {
         String strNoTelp = "+62281633961";
-        String strNoHp = "6285870009919";
+        String strNoHp = "";
         String strDinas = "Jasa Raharja";
         Intent pawas = new Intent(BerandaPawasb.this, DialerActivity.class);
         pawas.putExtra("nodinas", strNoTelp);

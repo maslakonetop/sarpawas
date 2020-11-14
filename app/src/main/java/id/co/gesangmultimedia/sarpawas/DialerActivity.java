@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.telecom.PhoneAccountHandle;
+import android.telephony.PhoneNumberUtils;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
@@ -213,6 +214,9 @@ public class DialerActivity extends AppCompatActivity {
     public void hape(View view) {
         EditText noHP = findViewById(R.id.etNoTelpon);
         Editable nomor = noHP.getText();
+        if(nomor.equals("")){
+            Toast.makeText(this, "Nomor tidak ditemukan", Toast.LENGTH_LONG).show();
+        }
         Intent telpon = new Intent(Intent.ACTION_CALL)
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         telpon.setData(Uri.fromParts("tel", String.valueOf(nomor), null));
@@ -240,36 +244,37 @@ public class DialerActivity extends AppCompatActivity {
     }
 
     public void pesanwa(View view) {
-        boolean installed = appInstalledOrNot("com.whatsapp");
-        if(installed) {
-            System.out.println("App is already installed on your phone");
-        } else {
-            System.out.println("App is not currently installed on your phone");
-        }
+
         //PackageManager pm = getPackageManager();
         EditText noWa = findViewById(R.id.etNoTelpon);
         String smsNumber = noWa.getText().toString();
         //String smsNumber = "6285870009919"; // E164 format without '+' sign
-        Intent sendIntent = new Intent(Intent.ACTION_SEND);
-        sendIntent.setType("text/plain");
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Bantuan Online");
-        sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
-        sendIntent.setPackage("com.whatsapp");
-        startActivity(sendIntent);
+        boolean isWhatsappInstalled = whatsappInstalledOrNot("com.whatsapp");
+        if (isWhatsappInstalled) {
+
+            Intent sendIntent = new Intent("android.intent.action.MAIN");
+            sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
+            sendIntent.putExtra("jid", PhoneNumberUtils.stripSeparators(smsNumber) + "@s.whatsapp.net");//phone number without "+" prefix
+
+            startActivity(sendIntent);
+        } else {
+            Uri uri = Uri.parse("market://details?id=com.whatsapp");
+            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+            Toast.makeText(this, "WhatsApp not Installed",
+                    Toast.LENGTH_SHORT).show();
+            startActivity(goToMarket);
+        }
     }
 
-    private boolean appInstalledOrNot(String s) {
+    private boolean whatsappInstalledOrNot(String uri) {
         PackageManager pm = getPackageManager();
-        boolean app_installed;
+        boolean app_installed = false;
         try {
-            String packageName = null;
-            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
             app_installed = true;
-        }
-        catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException e) {
             app_installed = false;
         }
         return app_installed;
-
     }
 }

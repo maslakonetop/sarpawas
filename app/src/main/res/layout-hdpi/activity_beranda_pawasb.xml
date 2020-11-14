@@ -114,6 +114,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@+id/btnFatimah"
                     android:background="@drawable/logorsud"
+
                     android:onClick="rsud" />
 
                 <ImageButton
